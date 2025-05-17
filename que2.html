@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Text Display</title>
+
+</head>
+<body>
+    <h1>Customize Your Text</h1>
+    <form id="customForm">
+        <label for="textColor">Text Color:</label><br>
+        <input type="text" id="textColor" placeholder="e.g., red, blue, #ff0000"><br>
+
+        <label for="bgColor">Background Color:</label><br>
+        <input type="text" id="bgColor" placeholder="e.g., white, black, #ffffff"><br>
+
+        <label for="content">Text Content:</label><br>
+        <input type="text" id="content" placeholder="e.g., Hello, World!"><br><br>
+
+        <button type="submit">Display Text</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('customForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const textColor = document.getElementById('textColor').value;
+            const bgColor = document.getElementById('bgColor').value;
+            const content = document.getElementById('content').value;
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.textContent = content;
+            outputDiv.style.color = textColor;
+            outputDiv.style.backgroundColor = bgColor;
+        });
+    </script>
+</body>
+</html>

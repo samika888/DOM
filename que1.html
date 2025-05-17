@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch Me Grow</title>
+    
+</head>
+<body>
+    <h1 id="growing-heading">Watch me grow!</h1>
+
+    <input type="number" id="font-size-input" placeholder="Enter font size in px">
+    <button onclick="changeFontSize()">Change Font Size</button>
+
+    <script>
+        function changeFontSize() {
+            const input = document.getElementById('font-size-input').value;
+            const heading = document.getElementById('growing-heading');
+            const size = parseInt(input);
+
+            if (!isNaN(size) && size > 0) {
+                heading.style.fontSize = size + 'px';
+            } else {
+                alert('Please enter a valid positive number.');
+            }
+        }
+    </script>
+</body>
+</html>
