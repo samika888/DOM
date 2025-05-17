@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Custom Text Display</title>
@@ -15,7 +15,7 @@
         <input type="text" id="bgColor" placeholder="e.g., white, black, #ffffff"><br>
 
         <label for="content">Text Content:</label><br>
-        <input type="text" id="content" placeholder="e.g., Hello, World!"><br><br>
+        <input type="text" id="content" placeholder="e.g. Hello World!"><br><br>
 
         <button type="submit">Display Text</button>
     </form>
@@ -24,7 +24,7 @@
 
     <script>
         document.getElementById('customForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from refreshing the page
+            event.preventDefault(); 
 
             const textColor = document.getElementById('textColor').value;
             const bgColor = document.getElementById('bgColor').value;
